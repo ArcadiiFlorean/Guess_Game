@@ -23,7 +23,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     displayMessage('No number ⛔');
   } else if (guess === secretNumber) {
-    displayMessage('Iubi iubi iubi pufa pufulet ! 🎉');
+    displayMessage('You Win ! 🎉');
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     if (score > hightScore) {
@@ -32,8 +32,6 @@ document.querySelector('.check').addEventListener('click', function () {
     }
 
     document.querySelector('.number').textContent = secretNumber;
-
-  
   } else if (guess !== secretNumber) {
     if (score > 1) {
       displayMessage(guess > secretNumber ? 'Too high 📈' : 'Too low 📉');
@@ -47,5 +45,4 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-// Buton de restart (opțional)
 document.querySelector('.again').addEventListener('click', resetGame);
